@@ -13,10 +13,6 @@
 
   --main-trans-dur: 250ms;
   --main-trans-time-func: cubic-bezier(0.4, 0, 0.2, 1);
-
-  --phone-width: 428px;
-  --tablet-width: 768px;
-  --desctop-width: 1440px;
 }
 
 /* =============== Reset =============== */
@@ -201,9 +197,99 @@ body {
 
 /* =============== Features =============== */
 
+.features {
+  padding-top: 96px;
+}
+
+.thumb {
+  display: none;
+}
+
+.features-title {
+  margin-bottom: 8px;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+}
+
 /* =============== Examples =============== */
 
+.examples {
+  display: none;
+}
+
 /* =============== Team =============== */
+
+.team {
+  padding-top: 96px;
+
+  background-color: var(--background-color);
+}
+
+.team-title {
+  margin-bottom: 72px;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  text-align: center;
+}
+
+.team-list {
+  text-align: center;
+}
+
+.team-list li {
+  width: 264px;
+  display: inline-block;
+}
+
+.team-item-descr {
+  padding: 32px 16px;
+  border-radius: 0px 0px 4px 4px;
+
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  background-color: var(--white-color);
+}
+
+.team-item-title {
+  margin-bottom: 8px;
+}
+
+.team-item-text {
+  margin-bottom: 8px;
+}
+
+.team-social-list {
+  display: flex;
+  gap: 0 24px;
+  align-items: center;
+}
+
+.team-social-link {
+  display: inline-block;
+  padding: 12px;
+  border-radius: 50%;
+
+  background-color: var(--accent-color);
+
+  transition: background-color var(--main-trans-dur) var(--main-trans-time-func);
+}
+
+.team-social-icon {
+  display: block;
+  width: 16px;
+  height: 16px;
+
+  fill: var(--background-color);
+}
+
+.team-social-link:hover,
+.team-social-link:focus {
+  background-color: var(--main-hover-color);
+}
 
 /* =============== Customers =============== */
 
@@ -239,6 +325,21 @@ body {
     font-size: 36px;
     line-height: 1.11;
   }
+
+  /* =============== Features =============== */
+
+  .features-list li:not(:last-child) {
+    margin-bottom: 72px;
+  }
+  .features-title {
+    text-align: center;
+  }
+
+  /* =============== Team =============== */
+
+  .team-item:not(:last-child) {
+    margin-bottom: 72px;
+  }
 }
 
 @media screen and (max-width: 428px) {
@@ -248,7 +349,7 @@ body {
   /* =============== Common =============== */
 
   .container {
-    width: var(--phone-width);
+    width: 428px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -258,13 +359,15 @@ body {
   .hero {
     width: var(--phone-width);
   }
+
+  /* =============== Features =============== */
 }
 
 @media screen and (min-width: 768px) {
   /* =============== Common =============== */
 
   .container {
-    width: var(--tablet-width);
+    width: 798px;
   }
 
   /* =============== Header =============== */
@@ -316,6 +419,26 @@ body {
     font-size: 56px;
     line-height: 1.07;
   }
+
+  /* =============== Features =============== */
+
+  .features-list {
+    display: flex;
+    gap: 72px 24px;
+    flex-wrap: wrap;
+  }
+  .features-list li {
+    flex-basis: calc((100% - 24px) / 2);
+  }
+
+  /* =============== Team =============== */
+
+  .team-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 62px 24px;
+    justify-content: center;
+  }
 }
 
 @media screen and (min-width: 1440px) {
@@ -325,7 +448,7 @@ body {
     font-weight: 400;
   }
   .container {
-    width: var(--desctop-width);
+    width: 1158px;
   }
   .section {
     padding-bottom: 120px;
@@ -361,5 +484,61 @@ body {
   }
   .hero-title {
     margin-bottom: 48px;
+  }
+
+  /* =============== Features =============== */
+
+  .features {
+    padding-top: 120px;
+  }
+  .features-list {
+    row-gap: 24px;
+  }
+  .features-list li {
+    flex-basis: calc((100% - 72px) / 4);
+  }
+  .thumb {
+    display: block;
+    background-color: var(--background-color);
+    padding: 24px 100px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+  }
+  .features-icon {
+    width: 64px;
+    height: 64px;
+    display: block;
+  }
+  .features-title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  /* =============== Examples =============== */
+  .examples {
+    display: block;
+  }
+  .examples-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+  .examples-title {
+    margin-bottom: 72px;
+
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    text-align: center;
+  }
+
+  /* =============== Team =============== */
+
+  .team {
+    padding-top: 120px;
+  }
+  .team-list {
+    row-gap: 24px;
   }
 }
