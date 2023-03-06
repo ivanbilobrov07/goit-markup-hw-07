@@ -562,8 +562,8 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  min-width: 408px;
-  min-height: 576px;
+  width: 408px;
+  height: 576px;
   padding: 72px 24px 24px;
 
   background: #fcfcfc;
