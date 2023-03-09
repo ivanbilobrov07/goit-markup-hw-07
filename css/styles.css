@@ -952,15 +952,11 @@ body {
     width: 270px;
   }
   .portfolio-list {
-    width: 396px;
+    max-width: 396px;
     margin: 0 auto 48px;
   }
   .portfolio-list li:not(:last-child) {
     margin-bottom: 48px;
-  }
-  .portfolio-img {
-    width: 396px;
-    height: 280px;
   }
 }
 
@@ -1005,7 +1001,7 @@ body {
     margin: 0 auto 48px;
   }
   .portfolio-list {
-    width: 290px;
+    max-width: 290px;
     margin: 0 auto 48px;
   }
   .portfolio-list li:not(:last-child) {
