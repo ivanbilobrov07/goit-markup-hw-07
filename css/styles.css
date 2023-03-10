@@ -461,10 +461,13 @@ body {
 }
 
 .backdrop.is-hidden .modal {
-  transform: scale(0.7);
+  transform: translate(-50%, -50%) scale(0.7);
 }
 
 .modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
   width: 392px;
   padding: 72px 16px 24px;
   position: relative;
@@ -474,7 +477,7 @@ body {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 
-  transform: scale(1);
+  transform: translate(-50%, -50%) scale(1);
   transition: transform var(--main-trans-dur) var(--main-trans-time-func);
 }
 
@@ -696,7 +699,8 @@ body {
 
   transition: background-color var(--main-trans-dur) var(--main-trans-time-func),
     color var(--main-trans-dur) var(--main-trans-time-func),
-    box-shadow var(--main-trans-dur) var(--main-trans-time-func);
+    box-shadow var(--main-trans-dur) var(--main-trans-time-func),
+    border var(--main-trans-dur) var(--main-trans-time-func);
 }
 
 .secondary-button:hover,
@@ -778,8 +782,13 @@ body {
 @media screen and (max-width: 1440px) and (min-width: 768px) {
   /* =============== Header =============== */
 
+  .contact-list {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+  }
   .contact-list li:first-child {
-    margin-bottom: 4px;
+    margin-bottom: 12px;
   }
 
   /* =============== Customers =============== */
@@ -944,12 +953,6 @@ body {
     padding-top: 8px;
   }
 
-  /* =============== Modal =============== */
-
-  .modal {
-    margin: 96px auto auto;
-  }
-
   /* portfolio.html */
 
   .categories-list {
@@ -957,7 +960,7 @@ body {
   }
   .portfolio-list {
     max-width: 396px;
-    margin: 0 auto 48px;
+    margin: 0 auto;
   }
   .portfolio-list li:not(:last-child) {
     margin-bottom: 48px;
@@ -978,12 +981,15 @@ body {
   /* =============== Modal =============== */
 
   .modal {
-    width: auto;
-    max-width: 398px;
-    margin-right: 15px;
-    margin-left: 15px;
+    width: 300px;
     padding-top: 30px;
     padding-bottom: 16px;
+  }
+  .modal-title {
+    margin-bottom: 2px;
+  }
+  .modal-form-field {
+    margin-bottom: 4px;
   }
   .modal-form-comment {
     height: 80px;
@@ -996,7 +1002,12 @@ body {
     margin-bottom: 10px;
   }
   .modal-form-label-checkbox {
-    margin-bottom: 16px;
+    margin-bottom: 8px;
+  }
+  .modal-form button {
+    display: block;
+    min-width: 140px;
+    padding: 12px 32px;
   }
 
   /* portfolio.html */
@@ -1041,7 +1052,7 @@ body {
   /* =============== Hero =============== */
 
   .hero {
-    width: 428px;
+    width: 100%;
   }
 
   /* =============== Customers =============== */
@@ -1106,9 +1117,6 @@ body {
 
   /* =============== Hero =============== */
 
-  .hero {
-    width: 768px;
-  }
   .hero-title {
     max-width: 496px;
     margin-bottom: 36px;
@@ -1169,30 +1177,29 @@ body {
 
   /* =============== Modal =============== */
 
-  .backdrop.is-hidden .modal {
-    transform: translate(-50%, -50%) scale(0.7);
-  }
-
   .modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
     width: 408px;
     min-height: 586px;
     padding: 72px 24px 24px;
-    transform: translate(-50%, -50%) scale(1);
   }
 
   /* portfolio.html */
 
+  .portfolio {
+    padding-top: 64px;
+    padding-bottom: 96px;
+  }
   .categories-list {
     justify-content: center;
+    margin-bottom: 64px;
+  }
+  .secondary-button {
+    padding: 12px 24px;
   }
   .portfolio-list {
     display: flex;
     flex-wrap: wrap;
     gap: 72px 24px;
-    justify-content: center;
   }
   .portfolio-img {
     width: 356px;
@@ -1331,6 +1338,13 @@ body {
 
   /* portfolio.html */
 
+  .portfolio {
+    padding-top: 100px;
+    padding-bottom: 120px;
+  }
+  .categories-list {
+    margin-bottom: 72px;
+  }
   .portfolio-list {
     gap: 48px 24px;
   }
