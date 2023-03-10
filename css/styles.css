@@ -1016,15 +1016,13 @@ body {
     margin: 0 auto 48px;
   }
   .portfolio-list {
-    max-width: 290px;
     margin: 0 auto 48px;
   }
   .portfolio-list li:not(:last-child) {
     margin-bottom: 48px;
   }
   .portfolio-img {
-    width: 290px;
-    height: 230px;
+    max-width: 100%;
   }
 
   .mobile-menu-socials-list {
